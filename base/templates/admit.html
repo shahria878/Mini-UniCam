@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UAP Admit Card</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 15px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    .logo-title h1 {
+      font-size: 28px;
+      color: #2e1a84;
+      margin: 0;
+    }
+
+    .user-panel {
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .user-panel .status {
+      font-size: 13px;
+    }
+
+    .green { color: green; font-weight: bold; }
+    .red { color: red; font-weight: bold; }
+    .user-photo {
+      width: 60px;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    /* Navbar */
+    nav {
+      background: #f5f5f5;
+      border-top: 2px solid #2e1a84;
+      border-bottom: 3px solid #2e1a84;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      padding: 12px 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2e1a84;
+      font-weight: bold;
+    }
+
+    .active {
+      color: black;
+    }
+
+    /* Main Content */
+    .main {
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+
+    .main h2 {
+      color: #000080;
+    }
+
+    .form-box {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      width: 100px;
+    }
+
+    select, input[type="radio"] {
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    .load-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: 2px solid #000080;
+      color: #000080;
+      font-weight: bold;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: white;
+    }
+
+    .data-table th,
+    .data-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 30px 0;
+      color: #444;
+    }
+
+    .footer-line {
+      width: 80%;
+      border: 1px solid #2e1a84;
+      margin: 30px auto 10px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-title">
+      <img src="uap_logo.png" alt="UAP Logo" class="logo">
+      <h1>University of Asia Pacific</h1>
+    </div>
+    <div class="user-panel">
+      <p><strong>Shahria Amin</strong> 22201212 / <a href="#">Logout</a></p>
+      <p class="status">
+        <span class="green">Current →</span> 2024, Fall / 2024, Spring - Term<br>
+        <span class="red">Registration →</span>
+        <span class="green">2024, Fall / 2024, Spring - Term</span>
+      </p>
+      <img src="user_photo.png" alt="User" class="user-photo">
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Admit Card</a></li>
+      <li><a href="#">Change Password</a></li>
+      <li><a href="#">Evaluation Form</a></li>
+      <li><a href="#">Registration</a></li>
+      <li><a href="#">Result</a></li>
+      <li><a href="#">Student Bill & Payment History</a></li>
+      <li><a href="#">Student Information</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h2>Admit Card: Program Session And Batch Wise</h2>
+    <div class="form-box">
+      <div class="form-group">
+        <label for="program">Program</label>
+        <select id="program">
+          <option>Bachelor of Science in Computer Science</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="session">Session</label>
+        <select id="session">
+          <option>2024, Fall</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="semester">Semester</label>
+        <select id="semester">
+          <option>54 [ 2022, Fall ]</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Exam</label>
+        <label><input type="radio" name="exam" checked> Mid</label>
+        <label><input type="radio" name="exam"> Final</label>
+      </div>
+
+      <div class="form-group">
+        <label>Roll</label>
+        <span>-</span>
+        <label>Bill</label>
+        <span>-</span>
+        <label>Evaluation</label>
+        <span>-</span>
+      </div>
+
+      <button class="load-button" onclick="loadData()">LOAD</button>
+    </div>
+
+    <!-- Placeholder Table -->
+    <table class="data-table" id="results">
+      <thead>
+        <tr>
+          <th>Course Code</th>
+          <th>Course Title</th>
+          <th>Faculty</th>
+          <th>Room</th>
+          <th>Schedule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JavaScript will populate rows here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <hr class="footer-line" />
+    <p>Powered by <strong>Edusoft Consultants Ltd.</strong></p>
+    <p>&copy; 2013 - 2024 Edusoft Consultants Ltd. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function loadData() {
+      const tbody = document.querySelector("#results tbody");
+      tbody.innerHTML = `
+        <tr>
+          <td>CSE101</td>
+          <td>Intro to Programming</td>
+          <td>Dr. Rahman</td>
+          <td>Room 304</td>
+          <td>Mon & Wed, 10:00 AM</td>
+        </tr>
+        <tr>
+          <td>CSE202</td>
+          <td>Data Structures</td>
+          <td>Prof. Karim</td>
+          <td>Room 207</td>
+          <td>Tue & Thu, 1:00 PM</td>
+        </tr>
+      `;
+    }
+  </script>
+
+</body>
+</html>
