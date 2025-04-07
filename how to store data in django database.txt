@@ -1,0 +1,50 @@
+PS E:\Mini UniCam\Login Signup> cd .\loginSignup\
+PS E:\Mini UniCam\Login Signup\loginSignup> python manage.py makemigrations
+No changes detected
+PS E:\Mini UniCam\Login Signup\loginSignup> python manage.py migrate       
+Operations to perform:
+  Apply all migrations: admin, auth, base, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+PS E:\Mini UniCam\Login Signup\loginSignup> python manage.py shell
+>>
+7 objects imported automatically (use -v 2 for details).
+
+Python 3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>>
+>>>
+>>> from your_app.models import Student
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'your_app'
+>>> Student.objects.create(name="Alice", age=21, course="Physics")
+<Student: Alice>
+>>> Student.objects.create(name="Bob", age=23, course="Chemistry")
+<Student: Bob>
+>>> exit()
+now exiting InteractiveConsole...
+PS E:\Mini UniCam\Login Signup\loginSignup> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 07, 2025 - 19:31:29
+Django version 5.2, using settings 'loginSignup.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+
+
+
+
+
+
+
+
+
+
+

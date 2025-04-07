@@ -1,0 +1,116 @@
+PS E:\Mini UniCam\Login Signup> cd .\loginSignup\
+PS E:\Mini UniCam\Login Signup\loginSignup> git init
+Initialized empty Git repository in E:/Mini UniCam/Login Signup/loginSignup/.git/
+PS E:\Mini UniCam\Login Signup\loginSignup> git add .
+PS E:\Mini UniCam\Login Signup\loginSignup> git commit -m"initial commit"
+[main (root-commit) 20b60fb] initial commit
+ 45 files changed, 1232 insertions(+)
+ create mode 100644 base/__init__.py
+ create mode 100644 base/__pycache__/__init__.cpython-313.pyc
+ create mode 100644 base/__pycache__/admin.cpython-313.pyc
+ create mode 100644 base/__pycache__/apps.cpython-313.pyc
+ create mode 100644 base/__pycache__/forms.cpython-313.pyc
+ create mode 100644 base/__pycache__/models.cpython-313.pyc
+ create mode 100644 base/__pycache__/urls.cpython-313.pyc
+ create mode 100644 base/__pycache__/views.cpython-313.pyc
+ create mode 100644 base/admin.py
+ create mode 100644 base/apps.py
+ create mode 100644 base/forms.py
+ create mode 100644 base/migrations/0001_initial.py
+ create mode 100644 base/migrations/0002_result.py
+ create mode 100644 base/migrations/0003_course_courseregistration.py
+ create mode 100644 base/migrations/__init__.py
+ create mode 100644 base/migrations/__pycache__/0001_initial.cpython-313.pyc
+ create mode 100644 base/migrations/__pycache__/0002_result.cpython-313.pyc
+ create mode 100644 base/migrations/__pycache__/0003_course_courseregistration.cpython-313.pyc
+ create mode 100644 base/migrations/__pycache__/__init__.cpython-313.pyc
+ create mode 100644 base/models.py
+ create mode 100644 base/static/css/style.css
+ create mode 100644 base/templates/admit.html
+ create mode 100644 base/templates/base.html
+ create mode 100644 base/templates/course_registration.html
+ create mode 100644 base/templates/evolution.html
+ create mode 100644 base/templates/home.html
+ create mode 100644 base/templates/registration/login.html
+ create mode 100644 base/templates/registration/signup.html
+ create mode 100644 base/templates/registration_success.html
+ create mode 100644 base/templates/result.html
+ create mode 100644 base/templates/student_info.html
+ create mode 100644 base/tests.py
+ create mode 100644 base/urls.py
+ create mode 100644 base/views.py
+ create mode 100644 db.sqlite3
+ create mode 100644 loginSignup/__init__.py
+ create mode 100644 loginSignup/__pycache__/__init__.cpython-313.pyc
+ create mode 100644 loginSignup/__pycache__/settings.cpython-313.pyc
+ create mode 100644 loginSignup/__pycache__/urls.cpython-313.pyc
+ create mode 100644 loginSignup/__pycache__/wsgi.cpython-313.pyc
+ create mode 100644 loginSignup/asgi.py
+ create mode 100644 loginSignup/settings.py
+ create mode 100644 loginSignup/urls.py
+ create mode 100644 loginSignup/wsgi.py
+ create mode 100644 manage.py
+PS E:\Mini UniCam\Login Signup\loginSignup> git push origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS E:\Mini UniCam\Login Signup\loginSignup> git remote add origin https://github.com/shahria878/Mini-UniCam   
+PS E:\Mini UniCam\Login Signup\loginSignup> git push origin main
+To https://github.com/shahria878/Mini-UniCam
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/shahria878/Mini-UniCam'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS E:\Mini UniCam\Login Signup\loginSignup> git pull origin main --rebase
+>>
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 2.44 KiB | 277.00 KiB/s, done.
+From https://github.com/shahria878/Mini-UniCam
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+PS E:\Mini UniCam\Login Signup\loginSignup> git add .
+>> git rebase --continue
+>> git push origin main
+>>
+fatal: no rebase in progress
+Enumerating objects: 56, done.
+Counting objects: 100% (56/56), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (52/52), done.
+Writing objects: 100% (55/55), 28.47 KiB | 3.16 MiB/s, done.
+Total 55 (delta 9), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/shahria878/Mini-UniCam
+   90653f4..b93218f  main -> main
+PS E:\Mini UniCam\Login Signup\loginSignup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
